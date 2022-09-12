@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<script src="jquery-3.6.0.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
 	<meta charset="UTF-8">
 	<title>Selectors Exercise</title>
 	<style>
@@ -65,12 +68,77 @@
 <script>
 	
 	$(document).ready(function(){
-	$(".container1").wrapInner(function(){
-	$(".black").append("<div>append text</div>") });
+ 	$(".container1").append("<Div> </div>").addClass(balck);
+       $("container1").show(300)
+
 	});
+
+// 	$(document).ready(function(){
+//   $("p").click(function(){
+//     $(this).hide();
+//   });
+// });
+
+$(document).ready(function(){
+    // $(".container1").append("<div class='black'><div>");
+    // $(".container1").prepend("<div class='whit'><div>");
+    // $(".container1 .pink").before("<p class='yellow'><p>");
+		$(".container2 p").each(function() {
+   $(this).replaceWith("<a href='http://"+$(this).text()+"'>"+ this.textContent +"</a>")
+
+	
+ })
+$(".container3 img").wrap("  <figcaption></figcaption>");
+$(".container3 img").after("<figcaption> cofee </figcaption>");
+
+
+
+$(".container4 td.col-age").empty();
+$(".container4 td contains (mohsen)").addClass("man");
+$(".container4 td  ").toggleClass("jj")
+
+
+$(".container 5 li").filter(  i%3)
+
+
+$(".container6 input[name*='username']").val("khaleed");
+$( .container6 input[*='username']   ).attr("checked","true");
+
+
+
+ });
+
+
+//  tog
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	   </script>
 </head>
 <body>
+
+	<p>If you click on me, I will disappear.</p>
+<p>Click me away!</p>
+<p>Click me too!</p>
+
 	<header>
 		<h1>Welcome to JQuery Course</h1>
 	</header>
